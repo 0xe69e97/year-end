@@ -1,48 +1,20 @@
 <template>
   <div class="home">
-    <!-- <Menu mode="horizontal" active-name="1" @on-select="open">
-        <MenuItem name="1">
-            <Icon type="ios-paper" />
-            自我介绍
-        </MenuItem>
-        <MenuItem name="2">
-            <Icon type="ios-people" />
-            做过的
-        </MenuItem>
-        <MenuItem name="3">
-            <Icon type="ios-paper" />
-            准备做的
-        </MenuItem>
-        <MenuItem name="4">
-            <Icon type="ios-construct" />
-            个人展望
-        </MenuItem>
-    </Menu> -->
     <div class="ctrl">
         <i-switch v-model="switch1" />
     </div>
-    <Drawer title="Basic Drawer" placement="left" :closable="true" v-model="switch1">
+    <Drawer title="菜单" placement="left" :closable="true" v-model="switch1">
         <Menu active-name="1" @on-select="open">
-            <MenuGroup title="内容管理">
+            <MenuGroup title="模块">
                 <MenuItem name="1">
                     <Icon type="md-document" />
-                    文章管理
-                </MenuItem>
-                <MenuItem name="2">
-                    <Icon type="md-chatbubbles" />
-                    评论管理
+                    自我介绍
                 </MenuItem>
             </MenuGroup>
-            <MenuGroup title="统计分析">
-                <MenuItem name="3">
-                    <Icon type="md-heart" />
-                    用户留存
-                </MenuItem>
-                <MenuItem name="4">
-                    <Icon type="md-leaf" />
-                    流失用户
-                </MenuItem>
-            </MenuGroup>
+            <MenuItem name="3">
+                <Icon type="md-heart" />
+                    2019 Flag
+            </MenuItem>
         </Menu>
     </Drawer>
   </div>
@@ -88,7 +60,11 @@ export default {
 <style>
     .ctrl {
         height: 60px;
+        line-height: 60px;
         width: 100vw;
+        position: fixed;
+        z-index: 999;
+        background-color: white;
     }
 </style>
 

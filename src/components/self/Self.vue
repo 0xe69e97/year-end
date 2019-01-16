@@ -1,10 +1,7 @@
 <template>
-    <div class="main-pages">
-        <!-- <h1>
-            大家好，我叫丁林，我在遥领医疗科技担任web前端开发工程师，喜欢钻研，学习新技术，当然也爱玩游戏，看书运动等等……
-        </h1> -->
-        <div>
-            <Card style="width:350px; cursor:pointer;">
+    <div class="main-pages" ref="mainPage">
+        <div class="continer">
+            <Card class="card-style">
                 <p slot="title">
                     个人信息
                 </p>
@@ -16,8 +13,8 @@
             </Card>
         </div>
         
-        <div>
-            <Card style="width:350px">
+        <div class="continer">
+            <Card class="card-style">
                 <p slot="title">
                     兴趣爱好
                 </p>
@@ -28,6 +25,19 @@
                 </ul>
             </Card>
         </div>
+
+        <div class="continer">
+            <Card class="card-style">
+                <p slot="title">
+                    职位
+                </p>
+                <ul>
+                    <li>2018/12/24</li>
+                    <li>Web前端开发工程师</li>
+                </ul>
+            </Card>
+        </div>
+        <BackTop></BackTop>
     </div>
 </template>
 
@@ -52,6 +62,8 @@ export default {
             hobbies: [
                 {
                     title: '跳舞'
+                },{
+                    title: '游戏'
                 }, {
                     title: '运动'
                 }, {
@@ -61,6 +73,18 @@ export default {
                 }
             ]
         }
+    },
+    mounted() {
+        console.log(this.$refs.mainPage)
+        this.$refs.mainPage.addEventListener('mousewheel', (event) => {
+            if (event.deltaY >0) {
+                // 往下
+                window.scrollTo(0, document.body.clientHeight + window.scrollY)
+            } else {
+                // 往上
+                window.scrollTo(0, window.scrollY - document.body.clientHeight)
+            }
+        })
     }
 }
 </script>
@@ -72,10 +96,17 @@ export default {
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 100%;
+        height: 300vh;
     }
-    .main-pages div {
-        height: 50%;
+    .main-pages .continer {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    .card-style {
+        width:400px;
+        cursor:pointer;
+        height: 250px!important;
     }
     ul li {
         list-style-type: none;

@@ -22,11 +22,9 @@ export default {
 
 <style scoped>
     .main-page {
-        height: calc(100vh - 60px);
+        height: 100vh;
         width: 100%;
-    }
-    header {
-        margin-top: 60px;
+        overflow: inherit;
     }
 </style>
 
