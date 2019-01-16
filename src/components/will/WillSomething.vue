@@ -38,8 +38,8 @@ export default {
     },
     methods: {
         addLength(val) {
-            if (!this.selected.includes(val)) {
-                this.selected.push(val)
+            if (!this.selected.includes(val[0]) && val.length > 0) {
+                this.selected.push(val[0])
             }
         },
         end() {
@@ -59,7 +59,7 @@ export default {
         align-items: center;
     }
     .flex-continer {
-        width: 500px;
+        width: 400px;
     }
     .parent {
         text-align: left;

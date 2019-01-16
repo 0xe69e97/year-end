@@ -75,7 +75,6 @@ export default {
         }
     },
     mounted() {
-        console.log(this.$refs.mainPage)
         this.$refs.mainPage.addEventListener('mousewheel', (event) => {
             if (event.deltaY >0) {
                 // 往下
