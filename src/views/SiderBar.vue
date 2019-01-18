@@ -1,13 +1,11 @@
 <template>
   <div class="home">
-      <!-- <transition name="name"> -->
     <div class="self animated jello" v-show="currentPage === 0">
         <h1>丁林</h1>
         <h2>1995/12/26</h2>
         <h2>辽宁 - 鞍山</h2>
         <h2>渤海大学</h2>
     </div>
-    <!-- </transition> -->
       <div class="hobby animated bounceInUp" v-show="currentPage === 1">
           <h2>技术</h2>
           <h2>看书</h2>
@@ -23,20 +21,26 @@
       </div>
       <div class="verify animated bounceInRight" v-show="currentPage === 4">
           <h1> 重构 verify 系统</h1>
-          <h2> 1. 让系统走向大众 </h2>
-          <h2> 2. 项目模块化，工程化。提升团队效率以及降低维护成本</h2>
-          <h2> 3. 提高系统交互性，流畅性，稳定性</h2>
+          <div class="continer">
+            <h2> 1. 让系统走向大众 </h2>
+            <h2> 2. 项目模块化，工程化。提升团队效率以及降低维护成本</h2>
+            <h2> 3. 提高系统交互性，流畅性，稳定性</h2>
+          </div>
       </div>
       <div class="team animated slideInUp" v-show="currentPage === 5">
           <h1> 团队提升 </h1>
-          <h2> 1. 更加融入公司 </h2>
-          <h2> 2. IT 内部技术分享</h2>
-          <h2> 3. 互相学习，提高质量，效率</h2>
+          <div class="continer">
+            <h2> 1. 更加融入公司 </h2>
+            <h2> 2. IT 内部技术分享</h2>
+            <h2> 3. 互相学习，提高质量，效率</h2>
+          </div>
       </div>
       <div class="solo animated lightSpeedIn" v-show="currentPage === 6">
           <h1>个人提升</h1>
-          <h2> 1. 增强对医疗行业的业务理解 </h2>
-          <h2> 2. 提高个人技术水平 </h2>
+          <div class="continer">
+            <h2> 1. 增强对医疗行业的业务理解 </h2>
+            <h2> 2. 提高个人技术水平 </h2>
+          </div>
       </div>
       <div class="end animated jackInTheBox" v-show="currentPage === 7">
           <img class="animated hinge delay-2s" src="../assets/end.jpeg" alt="end" v-show="imgShow">
@@ -129,6 +133,12 @@ export default {
     .end img {
         width: 20vw;
         border-radius: 100vw;
+    }
+    .continer {
+        height: auto!important;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 20px;
     }
 </style>
 
