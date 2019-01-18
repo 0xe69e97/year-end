@@ -17,19 +17,18 @@ export default new Router({
     {
       path: '/main',
       name: 'layout',
-      redirect: '/main/self',
-      component: Layout,
-      children: [
-        {
-          path: '/main/self',
-          name: 'self',
-          component: () => import ('@/components/self/Self.vue')
-        },{
-          path: '/main/will',
-          name: 'will',
-          component: () => import ('@/components/will/WillSomething.vue')
-        }
-      ]
+      component: Layout
+      // children: [
+      //   {
+      //     path: '/main/self',
+      //     name: 'self',
+      //     component: () => import ('@/components/self/Self.vue')
+      //   },{
+      //     path: '/main/will',
+      //     name: 'will',
+      //     component: () => import ('@/components/will/WillSomething.vue')
+      //   }
+      // ]
     },
     {
       path: '/finish',

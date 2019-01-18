@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
     .main-page {
-        height: 100vh;
+        /* height: 100vh; */
         width: 100%;
         overflow: inherit;
     }

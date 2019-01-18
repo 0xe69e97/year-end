@@ -74,17 +74,17 @@ export default {
             ]
         }
     },
-    mounted() {
-        this.$refs.mainPage.addEventListener('mousewheel', (event) => {
-            if (event.deltaY >0) {
-                // 往下
-                window.scrollTo(0, document.body.clientHeight + window.scrollY)
-            } else {
-                // 往上
-                window.scrollTo(0, window.scrollY - document.body.clientHeight)
-            }
-        })
-    }
+    // mounted() {
+    //     this.$refs.mainPage.addEventListener('mousewheel', (event) => {
+    //         if (event.deltaY >0) {
+    //             // 往下
+    //             window.scrollTo(0, document.body.clientHeight + window.scrollY)
+    //         } else {
+    //             // 往上
+    //             window.scrollTo(0, window.scrollY - document.body.clientHeight)
+    //         }
+    //     })
+    // }
 }
 </script>
 
