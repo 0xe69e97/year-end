@@ -1,7 +1,7 @@
 <template>
     <div class="main-page">
         <header>
-            <sider-bar />
+            <main-page />
         </header>
         <main class="main-page">
             <!-- this is Main page, checkout router! -->
@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import SiderBar from '@/views/SiderBar.vue'
+import MainPage from '@/views/MainPage.vue'
 export default {
     name: 'Layout',
     components: {
-        SiderBar
+        MainPage
     }
 }
 </script>

@@ -18,22 +18,6 @@ export default new Router({
       path: '/main',
       name: 'layout',
       component: Layout
-      // children: [
-      //   {
-      //     path: '/main/self',
-      //     name: 'self',
-      //     component: () => import ('@/components/self/Self.vue')
-      //   },{
-      //     path: '/main/will',
-      //     name: 'will',
-      //     component: () => import ('@/components/will/WillSomething.vue')
-      //   }
-      // ]
-    },
-    {
-      path: '/finish',
-      name: 'finish',
-      component: () => import ('@/views/Finish.vue')
     }
   ]
 })

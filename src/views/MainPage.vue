@@ -64,15 +64,17 @@ export default {
           if (this.currentPage === 7) {
               setTimeout(() => {
                   this.imgShow = false
-              }, 4000)
+              }, 3000)
           }
       }
   },
   mounted () {
       window.addEventListener('keyup', event => {
         if (event.keyCode === 39) {
+            if (this.currentPage === 7) return
             this.currentPage++
         } else if (event.keyCode === 37) {
+            if (this.currentPage === 0) return
             this.currentPage--
         }
       })
@@ -136,8 +138,8 @@ export default {
     }
     .continer {
         height: auto!important;
-        display: flex;
-        align-items: flex-start;
+        display: flex!important;
+        align-items: flex-start!important;
         margin-top: 20px;
     }
 </style>
